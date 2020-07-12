@@ -14,15 +14,19 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <a href="#" class="navbar-brand">Ristorante Con Fusion: About Us</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand mr-auto">Ristorante Con Fusion</a>
+            <div class="collapse navbar-collapse" id="Navbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item active"><a href="./aboutus.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="./Hvk3LS0HEei1swqHfVFp2A_1fd677102d0711e8a11f3f5f282cfd8b_aboutus.html(1)/aboutus.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            </ul>
+            </ul></div>
         </div>
     </nav>
     <header class="jumbotron">
@@ -39,7 +43,11 @@
     </header>
 
     <div class="container">
-        <div>
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ol>
             <div>
                <h3>About Us</h3>
                <hr>
@@ -79,8 +87,8 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -118,6 +126,7 @@
     <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/custom.min.js"></script>
 </body>
 
 </html>
