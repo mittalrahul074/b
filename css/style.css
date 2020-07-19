@@ -37,3 +37,11 @@ body{
 .navbar-dark{
     background-color: #512DAB;
 }
+
+input[type=radio]{
+    margin: 0% 2.25% 0% 2.75%;
+}
+
+#form{
+    margin-bottom: 5%;
+}

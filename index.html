@@ -38,8 +38,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center ">
+                <div class="col-12 col-sm-3 align-self-center ">
                     <img src="/img/img/logo.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center ">
+                    <a href="#testform" class="btn btn-block btn-warning">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -69,7 +72,7 @@
             <div class="col col-sm col-md">
                 <div class="media">
                     <div class="media-body">
-                        <h2 class="mt-0">Weekend Grand Buffet</h2>
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span> </h2>
                         <p >Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>    
                     </div>
                     <img src="img/img/buffet.png" alt="Weekend Grand Buffet" class="d-flex ml-3 img-thumbnail media-right">
@@ -91,6 +94,48 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-8 offset-sm-2 " id="form">
+        <section id="reserve"></section>
+        <div class="card">
+            <h3 class="card-header bg-warning text-white">Reserve A Table</h3>
+            <form action="" class="card-body" id="testform">
+                <div class="form-group row">
+                    <label for="no_of_guest" class="col-md-2 col-form-label" >Number of Guest</label>
+                    <div class="col-md-10">
+                        <input type="radio" name="no_of_guest" id="no_of_guest1" value="1" class="radio-inline">
+                        <label for="no_of_guest1">   1   </label>
+                        <input type="radio" name="no_of_guest" id="no_of_guest2" value="2" class="radio-inline">
+                        <label for="no_of_guest1">   2   </label>
+                        <input type="radio" name="no_of_guest" id="no_of_guest3" value="3" class="radio-inline">
+                        <label for="no_of_guest3">   3   </label>
+                        <input type="radio" name="no_of_guest" id="no_of_guest4" value="4" class="radio-inline">
+                        <label for="no_of_guest4">    4  </label>
+                        <input type="radio" name="no_of_guest" id="no_of_guest5" value="5" class="radio-inline">
+                        <label for="no_of_guest5">   5   </label>
+                        <input type="radio" name="no_of_guest" id="no_of_guest6" value="6" class="radio-inline">
+                        <label for="no_of_guest6">   6   </label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="date_time" class="col-md-2 col-form-label" >Date &amp; Time</label>
+                    <div class="col-md-4">
+                        <input placeholder="Date" class="textbox-n form-control" type="text" onfocus="(this.type='date')" id="date_time">
+                    </div>
+                    <div class="col-md-4">
+                        <input placeholder="Time" class="textbox-n form-control" type="text" onfocus="(this.type='time')" id="date_time">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-md-2 col-md-10">
+                        <button type="submit" class="btn btn-primary">
+                            Reserve
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -139,6 +184,14 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+    </script>
 </body>
 
 </html>
