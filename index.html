@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -23,14 +23,54 @@
             </button>
             <a href="index.html" class="navbar-brand mr-auto"><img src="/img/img/logo.png" alt="" class="" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a href="./index.html" class="nav-link"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                <li class="nav-item"><a href="/about/aboutus.html" class="nav-link"><span class="fa fa-info fa-lg"></span> About</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                <li class="nav-item"><a href="contact/contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-            </ul></div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a href="./index.html" class="nav-link"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a href="/about/aboutus.html" class="nav-link"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a href="contact/contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+                <span class="navbar-text"><a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span>Login
+                </a></span>
+            </div>
         </div>
     </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                            <label for="email"></label>
+                            <input type="email" name="email" id="email" placeholder="Enter email" class="form-control">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="password"></label>
+                            <input type="text" name="password" id="password" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="col-sm-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-2 offset-8">
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        </div>
+                        <div class="form-group col-sm-2 ">
+                            <button type="button" class="btn btn-grey btn-block" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
     <header class="jumbotron" >
         <div class="container">
             <div class="row row-header">
@@ -41,7 +81,7 @@
                 <div class="col-12 col-sm-3 align-self-center ">
                     <img src="/img/img/logo.png" alt="" class="img-fluid">
                 </div>
-                <div class="col-12 col-sm-3 align-self-center ">
+                <div class="col-12 col-sm-3 align-self-center" data-toggle="tooltip" data-html="true" title="Or call us at <br><strong>+98712345678</strong>" data-placement="bottom">
                     <a href="#testform" class="btn btn-block btn-warning">Reserve Table</a>
                 </div>
             </div>
@@ -63,7 +103,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
@@ -172,7 +211,7 @@
                         <a href="mailto:" class="btn btn-social-icon"><i class="fa fa-envelope fa-lg"></i></a>
                     </div>
                 </div>
-           </div>
+           </div>   
            <div class="row justify-content-center">             
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
@@ -185,12 +224,9 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(function() {
-  $('a[href*=#]').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-  });
-});
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
 </body>
 
